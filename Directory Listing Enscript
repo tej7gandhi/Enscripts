@@ -1,0 +1,31 @@
+/*Simple script to directory listing of any particular folder through Enscript */
+
+
+class MainClass {
+
+/* Function to perform a directory listing  of any particular folder on the hard drive
+and get folder size and each file size recursively */
+
+  void Main(CaseClass c) 
+  
+  
+  {
+  /* Location of the folder */
+   String pathRoot = "D:\\Test";
+   
+   DirRootClass dirRoot(LocalMachine);
+   
+   DirectoryClass dir();
+   if (dirRoot.GetListing(pathRoot, dir))
+    {
+      
+    
+      foreach(DirectoryClass d in dir) 
+      /* Write the name of the folder */   
+      {
+       Console.WriteLine(d.Name());
+      }
+    }
+  }
+  
+}
