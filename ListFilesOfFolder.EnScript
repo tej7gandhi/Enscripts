@@ -1,7 +1,9 @@
 class MainClass {
 
 /* Function to perform a directory listing  of any particular folder on the hard drive
-and get folder size and each file size recursively */
+and get folder size and each file size recursively, monitor the size of the folder
+If the folder size remains the same the break out of the loop.
+*/
 
 
   void Main(CaseClass c)
