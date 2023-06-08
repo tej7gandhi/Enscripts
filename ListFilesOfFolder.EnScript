@@ -1,0 +1,47 @@
+class MainClass {
+
+/* Function to perform a directory listing  of any particular folder on the hard drive
+and get folder size and each file size recursively */
+
+
+  void Main(CaseClass c)
+
+
+ {
+   String pathRoot = "D:\\SANS";
+   ulong Sum=0,prevSum=0,i=0;
+   DirRootClass dirRoot(LocalMachine);
+   DirectoryClass dir();
+   if (dirRoot.GetListing(pathRoot, dir))
+    {
+      /* Creates an infinite loop */
+      while(i==0)
+      {
+        foreach(DirectoryClass d in dir)
+
+        {
+
+         Console.WriteLine("The name of the file: {0} and the size is {1} ",d.Name() ,d.LogicalSize());
+
+         Sum= Sum+d.LogicalSize();
+         Console.WriteLine("Total sum is {0}",Sum);
+
+        }
+
+      Console.WriteLine("The current sum is: {0}",Sum);
+
+      Console.WriteLine("Done");
+      Console.WriteLine("The previous sum is: {0}",prevSum);
+        if(prevSum==Sum)
+        {
+        break;
+        }
+        prevSum=Sum;
+        Console.WriteLine("The previous sum is: {0}",prevSum);
+       SystemClass::Sleep(30000);
+
+     }
+    }
+  }
+
+}
