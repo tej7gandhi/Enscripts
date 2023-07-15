@@ -1,0 +1,17 @@
+//Simple Enscript to create Bookmark folder
+
+
+class MainClass {
+  void Main(CaseClass c) {
+  
+    
+    BookmarkClass Evidences = new BookmarkClass(c.BookmarkRoot(), "Evidence Files", NodeClass::FOLDER);
+    BookmarkClass Pictures = new  BookmarkClass(c.BookmarkRoot(), "Pictures", NodeClass::FOLDER);
+    BookmarkClass Videos = new BookmarkClass(c.BookmarkRoot(), "Videos", NodeClass::FOLDER);
+    BookmarkClass Documents = new BookmarkClass(c.BookmarkRoot(), "Documents", NodeClass::FOLDER);
+    BookmarkClass Miscellenous = new BookmarkClass(c.BookmarkRoot(), "Miscellenous", NodeClass::FOLDER);
+   
+    
+    
+    }
+}
