@@ -1,0 +1,21 @@
+/*
+Simple Enscript to spawn powershell thus interacting between different programing tools.
+*/
+class MainClass {
+
+  void Main() {
+    SystemClass::ClearConsole(SystemClass::SHOWCONSOLE);
+    ExecuteClass exec();
+    exec.SetApplication("powershell.exe");
+    exec.SetFolder("C:\\Windows\\System32\\WindowsPowerShell\\v1.0");
+    exec.SetCommandLine("-c dir");
+    exec.SetShow(false);
+    if (exec.Start(LocalMachine, 1000)) {//can also take a connection to a remote node from the BatchClass
+      Console.WriteLine("Output----------------------");
+      Console.WriteLine(exec.Output());
+      Console.WriteLine("----------------------");
+    }
+    else
+      Console.WriteLine("Could not start cmd.exe: {0}", SystemClass::LastError());
+  }
+}
