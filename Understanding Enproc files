@@ -4,3 +4,9 @@ Processed Evidence enables an investigator to quickly sift through lot of data a
 
 Encase has a processing module that enables it to perform this function!
 
+Whenever a user selects certain options in the processing module, these are reflected in the .EnProc file that Encase creates.
+
+Enproc files can be loaded and reloaded in any case and the investigator can begin processing with the same options repeatedly.
+
+Using these set templates reduces the investigator to load the same configurations repeatedly!
+
